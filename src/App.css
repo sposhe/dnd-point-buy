@@ -1,0 +1,42 @@
+.points,
+.ability-score {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.ability {
+  display: inline-grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "score increase"
+    "score decrease";
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+  align-items: center;
+}
+.ability-score {
+  grid-area: score;
+}
+.ability-button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.ability-button {
+  background: #214fd8;
+  color: #ffffff;
+  border: none;
+  min-width: 6em;
+  border-radius: 0.1em;
+  padding: 0.5ch;
+  cursor: pointer;
+}
+.ability-button[aria-disabled="true"] {
+  background: #cccccc;
+  color: #222222;
+  cursor: not-allowed;
+}
+.ability-button-description {
+  font-size: 0.8em;
+}
